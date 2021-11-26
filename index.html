@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head onmouseleave="closeDropdown(this)">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide show html</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="tailwindcss.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js" integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4=" crossorigin="anonymous"></script>
+
+</head>
+<body >
+    <div id="app">
+
+        <div class="logo1" id="mylogo"><img src="images/logo-cutout.png" alt="logo"></div>
+        <ul class="menu">
+         
+          <li @mouseover="listOne = true" @mouseleave="listOne = false">
+               
+            <a href="#">Home</a>
+          
+          </li>
+          
+          <li @mouseover="listTwo = true" @mouseleave="listTwo = false">
+        
+            <a href="#">Foundation <i class="fa fa-caret-down down1"></i></a>
+      
+            <transition name="fade">
+              
+              <ul class="sub-drop sub-drop2" v-if="listTwo" @click="listTwo = false">
+                
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Chairwoman</a></li>
+                <li><a href="#">Chairwoman Activities</a></li>
+                
+              </ul>
+            
+             </transition>
+          
+          </li>
+          
+          <li @mouseover="listThree = true" @mouseleave="listThree = false">
+        
+            <a href="#">Programs <i class="fa fa-caret-down down1"></i></a>
+      
+            <transition name="fade">
+              
+              <ul class="sub-drop sub-drop3" v-if="listThree" @click="listThree = false">
+                
+                <li><a href="#">Sub Menu Item</a></li>
+                <li><a href="#">Sub Menu Item</a></li>
+                <li><a href="#">Sub Menu Item</a></li> 
+                
+              </ul>
+            
+             </transition>
+          
+          </li>
+          
+          <li @mouseover="listFour = true" @mouseleave="listFour = false">
+        
+            <a href="#">CII</a>
+          
+          </li>
+          <li @mouseover="listFive = true" @mouseleave="listFive = false">
+        
+            <a href="#">Media</a>
+          
+          </li>
+          <li @mouseover="listsix = true" @mouseleave="listsix = false">
+        
+            <a href="#">Contact Us</a>
+          
+          </li>
+        </ul>
+        <div class="divhello">helloo</div>
+        
+
+      </div>
+        <section class="container slide">
+            <div class=" item1 mySlides">
+                <div class="text image">
+                    <h1 class="type1">For Her organization</h1>
+                    <h2 class="type2">for women's issues to advocate </h2>
+               <div class="contactus">
+                    <h2 class="contactus1">Contact Us :</h2>
+                    <span class="email"> <a href="mailto:forher.ngo@gmail.com"><i class="fas fa-envelope envelopee"></i></a> </span>
+                    <span class="phone"> <a href="tel:1-0780-397-2810"><i class="fas fa-phone-alt altt"></i></a></span>
+                    
+                    <span class="facebook"><a href="http://www.facebook.com/@forher.ngo "><i class="fab fa-facebook-f ff"></i></a></span>
+                </div>
+             </div>
+                
+            </div>
+            <div class="item item2 mySlides fade">
+                <img class="image" src="images/slide22.jpg" />
+                <a href="#" class="btn btn1">Read More</a>
+                <!-- <div class="caption caption1">The organization #for her to advocate for women's issues participated in the conference to launch the strategy of the Iraqi Women's Network, which was held in Baghdad over two days.</div> -->
+            </div>
+            <div class="item item3 mySlides fade">
+                <img class="image" src="images/slide33.jpg" />
+                <a href="#" class="btn btn2">Read More</a>
+                <!-- <div class="caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ratione sequi minima voluptas nihil possimus ab quasi et eaque earum sed, officia deleniti soluta perferendis perspiciatis sunt. Placeat, non ipsam?</div> -->
+            </div>
+            <div class="item item4 mySlides fade">
+                <img class="image" src="images/slide6.jpg" />
+                <a href="#" class="btn">Read More</a>
+                <div class="caption caption2">The organization #for her  received 10 Yazidi survivors as part of an integrated government program ...</div>
+            </div>
+            <div class="item item5 mySlides fade">
+                <img class="image" src="images/slide7.jpg" />
+                <a href="#" class="btn">Read More</a>
+                <div class="caption caption3">The head of an organization for her, Marwa Abdel Reda, after the war against the terrorist ISIS, visits a group of widows ...</div>
+            </div>
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span>
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span>  
+              </div>
+        </section>
+        <section class="section_2">
+            <div class="latestEvent">
+                <h1 class="header1">Latest <span>Event</span></h1>
+                <div class="BriefSummary1">
+                        <span class="year">2021</span>
+                    <div class="BriefText">
+                        <h1  class="header2">Training widows on women's self-empowerment</h1>
+                        <p class="tex1">The head of an organization for her, Marwa Abdel Reda, speaking to Al-Sabah newspaper, on the occasion of International Widows' Day:
+                            "After the war against ISIS, I visited a group of widows to train them on women's self-empowerment ..."</p>
+                    </div>
+                    <div class="infoEvent1">
+                        <a href="#"><i class="fas fa-calendar-alt"></i></a>
+                        <span class="data1">24 / june / 2021</span>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+                        <span class="data1">Iraq-Baghdad</span>
+                    </div>
+                </div>
+
+                    <div class="BriefSummary2">
+                        <span class="year">2021</span>
+                        <div class="BriefText">
+                            <h1  class="header3">Conference to launch the strategy of the Iraqi Women's Network</h1>
+                            <p class="tex2">#For Her organization participated in the conference to launch the strategy of the Iraqi Women's Network, which was held in Baghdad over two days.</p>
+                        </div>
+                        <div class="infoEvent2">
+                            <a href="#"><i class="fas fa-calendar-alt"></i></a>
+                            <span class="data1">14 / june / 2021</span>
+                            <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+                            <span class="data1">Iraq-Baghdad</span>
+                        </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section_3">
+            <h1 class="header-1">Programs</h1>
+            <div class="subprograms">
+                <div class="program">
+                    <div id="im"> 
+                    <img src="images/slide6.jpg" alt="picture Yazidi">
+                    </div>
+                    <div id="text" class="captionprog">
+                        <h1 class="textprog">Supporting 10 Yazidi women within an integrated government program</h1>
+                        <span class="spanprog">Program</span>
+                        <a href="#" class="btnprog btnprog1">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="program">
+                    <div id="im">
+                    <img src="images/slide22.jpg" alt="picture Tishreen uprising">
+                    </div>
+                    <div id="text" class="captionprog">
+                        <h1 class="textprog">A study on women’s participation in the Tishreen uprising, which was entitled “Women’s Voices Rising in Tishreen”</h1>
+                        <span class="spanprog">Program</span>
+                        <a href="#" class="btnprog">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="program">
+                    <div id="im">
+                    <img src="images/slide7.jpg" alt="ISIS war">
+                    </div>
+                    <div id="text" class="captionprog ">
+                        <h1 class="textprog">After the war against the terrorist Daesh, I visited a group of widows to train them on women's self-empowerment, and I saw...</h1>
+                        <span class="spanprog">Program</span>
+                        <a href="#" class="btnprog">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="section_4">
+            <div class="grid_sec_4">
+                <div class="img_sec_4">
+                    <img src="" alt="">
+                    
+                </div>
+                <div class="block_sec_4">
+                    <div class="addres_sec_4">For Her<span class="adress_span_sec_4">-Founder</span></div>
+                    <p class="p_sec_4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta unde id nostrum ducimus rem! Veniam recusandae optio autem, cum consequuntur repudiandae est dolorem, alias error voluptates ducimus voluptatum, illum sed!</p>
+                    <div class="icons_sec_4">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-whatsapp-square"></i>
+                    </div>
+                    <a href="#" class="btn_sec_4">Read More</a>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="block_fr">
+                <h1>Be One Of Our Family</h1>
+                <img class="img_fr" src="images/undraw_online_connection_6778.svg" alt="bg-footer">
+                <a class="a_fr" href="#">Join Us Now</a>
+            </div>
+
+            <div class="end_fr">
+                <div class="header_fr"><h1>For Her organization <br> for women's issues to advocate </h1></div>
+                <div class="icon_fr">
+                    <span class="facebook_fr"><a href="http://www.facebook.com/@forher.ngo "><i class="fab fa-facebook-f fff"></i></a></span>
+                    <span class="mailto_fr"> <a href="mailto:forher.ngo@gmail.com"><i class="fas fa-envelope envelopeee"></i></a> </span>
+                    <span class="twitter_fr"><a href=""><i class="fab fa-twitter twitterrr"></i></a></span> 
+                    <span class="phone_fr"> <a href="tel:1-0780-397-2810"><i class="fas fa-phone-alt alttt"></i></a></span>
+                </div>
+            </div>
+            <div class="div_p_fr">
+                <p class="p_fr">Copyright © For Her 2021. All Rights Reserved.</p>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="main.js"></script>
+
+</body>
+</html>
+
